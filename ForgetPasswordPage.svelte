@@ -1,0 +1,362 @@
+
+<script>
+  import { Link } from 'svelte-routing';
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Implement your logic to handle the form submission and send password reset email here
+  };
+</script>
+
+<div class="text-center m-5-auto login">
+  <h2 id="reset_h2">Reset your password</h2>
+  <h5>Enter your email address and we will send you a new password</h5>
+  <form on:submit="{handleSubmit}">
+    <p>
+      <label for="email" id="reset_pass_lbl">Email address</label><br />
+      <input type="email" id="email" name="email" required />
+    </p>
+    <p>
+      <button type="submit" id="sub_btn">Send password reset email</button>
+    </p>
+  </form>
+  <footer>
+    <p>First time? <Link to="/register">Create an account</Link>.</p>
+    <p><Link to="/">Back to Homepage</Link>.</p>
+  </footer>
+</div>
+
+<style>
+  /* Add your styles here */
+  
+/* feature 1 -> login module css*/
+/***    General     ***/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif
+}
+
+body {
+    margin: 0 auto
+}
+
+.m-5-auto {
+    margin: 5rem auto
+}
+
+.primary-button {
+    margin-top: 5rem;
+    margin-right: 1rem;
+    padding: .6rem;
+    width: 10rem;
+    background: #222;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all .5s;
+    cursor: pointer;
+    text-transform: capitalize
+}
+
+/***    Landing Page     ***/
+.text-center{
+    text-align: center!important;
+/* display: flex;
+justify-content: center; */
+}
+.main-title,
+.main-para {
+    color: #f1f1f1;
+
+}
+
+.main-title {
+    padding-top: 2rem;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase
+}
+
+.main-para {
+    padding-top: 4rem;
+    font-size: 2.5rem;
+    text-Transform: capitalize;
+}
+
+.headerimg{
+    padding-top: 2rem;
+}
+
+.reg_btn span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.reg_btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.reg_btn:hover span {
+  padding-right: 25px;
+}
+
+.reg_btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.buttons{
+    padding-top: -10px;
+}
+
+/***    Login Page     ***/
+.main{
+    background-color: white;
+    height: 100vh !important;
+}
+.login h2 {
+    font-weight: 300;
+}
+
+.login form {
+    display: inline-block;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 2rem;
+    margin: 2rem 0 1rem 0
+}
+
+.login form label {
+    float: left;
+    font-size: .9rem;
+    margin: 0;
+    padding: 0
+}
+
+.right-label {
+    float: right;
+    cursor: pointer;
+}
+
+.login input {
+    width: 15rem;
+    padding: .3rem;
+    border-radius: 5px;
+    outline: none;
+    border: none
+}
+
+#sub_btn {
+    display: block;
+    width: 100%;
+    padding: .3rem;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#sub_btn:hover {
+    background: #333;
+    transition: all .5s
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+/***    Register Page     ***/
+#checkbox {
+    width: 1rem
+}
+
+form span {
+    font-size: .8rem
+}
+
+#reset_pass_lbl {
+    float: left
+}
+
+/***    Home Page     ***/
+.home-page-title {
+    color: #222
+}
+  
+/* feature 1 -> login module css*/
+/***    General     ***/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif
+}
+
+body {
+    margin: 0 auto
+}
+
+.m-5-auto {
+    margin: 5rem auto
+}
+
+.primary-button {
+    margin-top: 5rem;
+    margin-right: 1rem;
+    padding: .6rem;
+    width: 10rem;
+    background: #222;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: all .5s;
+    cursor: pointer;
+    text-transform: capitalize
+}
+
+/***    Landing Page     ***/
+.text-center{
+    text-align: center!important;
+/* display: flex;
+justify-content: center; */
+}
+.main-title,
+.main-para {
+    color: #f1f1f1;
+
+}
+
+.main-title {
+    padding-top: 2rem;
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase
+}
+
+.main-para {
+    padding-top: 4rem;
+    font-size: 2.5rem;
+    text-Transform: capitalize;
+}
+
+.headerimg{
+    padding-top: 2rem;
+}
+
+.reg_btn span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.reg_btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.reg_btn:hover span {
+  padding-right: 25px;
+}
+
+.reg_btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.buttons{
+    padding-top: -10px;
+}
+
+/***    Login Page     ***/
+.main{
+    background-color: white;
+    height: 100vh !important;
+}
+.login h2 {
+    font-weight: 300;
+}
+
+.login form {
+    display: inline-block;
+    background: #f3f3f3;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    padding: 2rem;
+    margin: 2rem 0 1rem 0
+}
+
+.login form label {
+    float: left;
+    font-size: .9rem;
+    margin: 0;
+    padding: 0
+}
+
+.right-label {
+    float: right;
+    cursor: pointer;
+}
+
+.login input {
+    width: 15rem;
+    padding: .3rem;
+    border-radius: 5px;
+    outline: none;
+    border: none
+}
+
+#sub_btn {
+    display: block;
+    width: 100%;
+    padding: .3rem;
+    border: none;
+    background: #222;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#sub_btn:hover {
+    background: #333;
+    transition: all .5s
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    color: white;
+}
+
+/***    Register Page     ***/
+#checkbox {
+    width: 1rem
+}
+
+form span {
+    font-size: .8rem
+}
+
+#reset_pass_lbl {
+    float: left
+}
+
+/***    Home Page     ***/
+.home-page-title {
+    color: #222
+}
+
+</style>
